@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tripadvisor Official Site</title>
+  <link rel="shortcut icon" href="images/favicon1.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="messageDisplay" id="message">
+    <div class="closeBtnMsgDisp">
+      <span onclick="closeMessage()" id="closeButton2" style="font-size: 32px;color:#000000;z-index:1;cursor:pointer;">&times;</span>
+    </div>
+    <div class="iconMsgDisp">
+      <img src="images/icon.svg" alt="icon" class="icon">
+    </div>
+    <div class="appMsgDisp">
+      <table>
+        <tr>
+          <td>
+            <div class="appMsg" style="margin-top:-8px;">
+              <span style="color:#5A5A5A;">Tripadvisor for iOS</span>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </div>
+          </td>
+          <td>
+            <div class="downloads" style="color:#5A5A5A;margin-left:5px;margin-top:-10px;font-size:11px;font-weight:600;">
+              (110,043)
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <div class="appLinks">
+            <td align="right" style="float:right;">
+              <button type="button" class="btn btn-sm btn-dark install-btn" style="padding:8px;font-weight:600 ;font-size:12px"><span style="font-size:bold;">Install</span></button>
+              <button type="button" class="btn btn-sm btn-outline-dark" style="padding:8px;font-weight:600;font-size:12px;"><span style="font-size:bold;">Open In App</span></button>
+            </td>
+          </div>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+  <div class="noticeDisplayBox" id="notice">
+    <div class="noticeDisplay">
+      <div class="travelNotice">
+        <span>TRAVEL NOTICE:</span>
+        <a href="#">Learn more about COVID-19</a>
+      </div>
+      <div>
+        <span onclick="closeNotice()" id="closeButton1" style="font-size: 30px;color:#000000;cursor:pointer;">&times;</span>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="headerOptions" style="background-color:#FFF;">
+      <img src="images/icon1.svg" class="logo" alt="Logo">
+      <div class="navBarLinks">
+        <button type="button" class="link-btn btn-space"><i class="fa fa-plus-circle" style="font-size:22px;margin-right:8px;"></i>Post</button>
+        <button type="button" class="link-btn btn-space"><i class="fa fa-bell-o" style="font-size:22px;margin-right:8px;"></i>Alerts</button>
+        <button type="button" class="link-btn btn-space"><i class="fa fa-heart-o" style="font-size:22px;margin-right:8px;color:black"></i>Trips</button>
+        <button type="button" class="btn-sign-in btn-space">Sign In</button>
+      </div>
+    </div>
+    <div class="headerOptions">
+      <div class="container1">
+        <span class="menu-icon" onclick="openMenu()">&#9776;</span>
+        <img src="images/icon1.svg" class="logo" alt="Logo" style="visibility:hidden;margin-left:auto;margin-right:auto;">
+        <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+      <div class="menu-container1" id="ToggleMenu">
+        <div class="menu-sub-container1" id="ToggleSubMenu">
+          <span onclick="closeMenu()" id="closeButton" style="margin-left: 300px;font-size: 26px;color:#000000;z-index:1;cursor:pointer;">&times;</span>
+          <div class="menu-content-1">
+            <button type="button" class="btn-sign-in" style="padding-left:30%;padding-right:30%;">Sign In</button>
+            <button type="button" class="MajorMenuContent">Post<i class="fa fa-angle-down" style="font-size:16px;margin-left:10px;color:#000000"></i></button>
+            <button type="button" class="MajorMenuContent">Alerts</button>
+            <button type="button" class="MajorMenuContent">Trips</button>
+            <button type="button" class="MajorMenuContent">Bookings</button>
+            <hr style="margin-left:-4px;margin-right:4px;border-top: 1px solid rgba(0,0,0,0.2);margin-top:30px;">
+            <button type="button" class="MinorMenuContent">Hotels</button>
+            <button type="button" class="MinorMenuContent">Things to do</button>
+            <button type="button" class="MinorMenuContent">Restaurants</button>
+            <button type="button" class="MinorMenuContent">Flights</button>
+            <button type="button" class="MinorMenuContent">Holiday Homes</button>
+            <button type="button" class="MinorMenuContent">Shopping</button>
+            <button type="button" class="MinorMenuContent">Package Holidays</button>
+            <button type="button" class="MinorMenuContent">Cruises</button>
+            <button type="button" class="MinorMenuContent">Car Hire</button>
+            <button type="button" class="MinorMenuContent">More<i class="fa fa-angle-down" style="font-size:14px;margin-left:10px;"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="headerServices">
+      <div class="Services">
+        <ul class="svcs" style="display:flex;padding-inline-start:20px;">
+          <li><button type="button" class="btn btn-outline-black" name="button">Hotels<span style="float:right;margin-right:5px;"><i class="fa fa-bed"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button">Things to do<span style="float:right;margin-right:5px;"><i class="fa fa-list-alt"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button">Restaurants<span style="float:right;margin-right:5px;"><i class="fa fa-cutlery"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button">Write a review<span style="float:right;margin-right:5px;"><i class="fa fa-pencil-square-o"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button">Travel Forums<span style="float:right;margin-right:5px;"><i class="fa fa-comments"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button">Flights<span style="float:right;margin-right:5px;"><i class="fa fa-plane"></i></span></button></li>
+          <li><button type="button" class="btn btn-outline-black" name="button" style="margin-right:0px;">More<span style="float:right;margin-right:5px;"><i class="fa fa-ellipsis-h"></i></span></button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="searchDiv">
+      <div class="greenSearchBackground">
+        <div class="Search">
+          <div class="SearchHeader" style="letter-spacing:-1.75px;">
+            Find the good out there.
+          </div>
+        </div>
+      </div>
+      <div class="illustration">
+        <img id="illus" src="images/illustration.svg" alt="illustration">
+      </div>
+      <div class="SearchBar">
+        <input type="text" class="searchTerm" placeholder="Where to?" style="margin-left:10%;">
+        <span class="fa fa-search" style="z-index:3;margin-left:-83%;font-size:20px;color:#5d5d5d;"></span>
+      </div>
+    </div>
+    <div class="supportTheGood">
+      <h2 class="supportHeaderDiv">
+        <div class="row">
+          <div class="col-3">
+            <hr>
+          </div>
+          <div class="col-6">
+            <span class="supportHeader">Support the Good Out there</span>
+          </div>
+          <div class="col-3">
+            <hr>
+          </div>
+        </div>
+      </h2>
+      <div class="supportCards">
+        <ul class="supportList">
+          <li class="supportItem">
+            <div class="card">
+              <div class="image">
+                <img src="images/supportPic1.jpeg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="imageTitle">
+                Relive your travel experiences
+              </div>
+              <a href="#" class="supportLink">Write a review</a>
+            </div>
+          </li>
+          <li class="supportItem">
+            <div class="card">
+              <div class="image">
+                <img src="images/supportPic2.svg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="imageTitle">
+                Help the restaurants you want to visit
+              </div>
+              <a href="#" class="supportLink">Buy a gift card</a>
+            </div>
+          </li>
+          <li class="supportItem">
+            <div class="card">
+              <div class="image">
+                <img src="images/supportPic3.jpeg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="imageTitle">
+                Explore the globe from home
+              </div>
+              <a href="#" class="supportLink">Book a virtual experience</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="travellerGuide">
+      <h2 class="travellerHeaderDiv">
+        <div class="row">
+          <div class="col-3">
+            <hr>
+          </div>
+          <div class="col-6">
+            <span class="supportHeader">Traveller Guides</span>
+          </div>
+          <div class="col-3">
+            <hr>
+          </div>
+        </div>
+      </h2>
+      <div class="supportCards">
+        <ul class="supportList">
+          <li class="supportItem">
+            <div class="card1">
+              <div class="image1">
+                <img src="images/travellerPic1.jpg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="traveller1">
+                <img src="images/traveller1.jpg" alt="traveller" class="traveller" style="width:75px;">
+              </div>
+              <div class="content" style="font-weight:600;">
+                By Clara S
+              </div>
+              <div class="Title">
+                <a href="#">Top Restaurants Around the Globe are Delivering</a>
+              </div>
+              <div class="content">
+                Just because you're stuck at home doesn't mean you can't indulge in the world...
+              </div>
+              <div class="rating">
+                <i class="fa fa-heart" aria-hidden="true" style="font-size:16px;color:#ff5d5d;margin-left:170px;margin-top:10px;"></i>
+              </div>
+              <div class="rating" style="font-family:Arial;margin-left:148px;margin-top:-5px;">
+                32 items
+              </div>
+            </div>
+          </li>
+          <li class="supportItem">
+            <div class="card1">
+              <div class="image1">
+                <img src="images/travellerPic2.jpg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="traveller1">
+                <img src="images/traveller2.jpg" alt="traveller" class="traveller" style="width:75px;">
+              </div>
+              <div class="content" style="font-weight:600;">
+                By Travel Babbo
+              </div>
+              <div class="Title">
+                <a href="#">Our Favorite Place to Get the Kids Outside</a>
+              </div>
+              <div class="content">
+                We've traveled to 62 countries with our kids and have spent a lot of time...
+              </div>
+              <div class="rating">
+                <i class="fa fa-heart" aria-hidden="true" style="font-size:16px;color:#ff5d5d;margin-left:170px;margin-top:10px;"></i>
+              </div>
+              <div class="rating" style="font-family:Arial;margin-left:148px;margin-top:-5px;">
+                24 items
+              </div>
+            </div>
+          </li>
+          <li class="supportItem">
+            <div class="card1">
+              <div class="image1">
+                <img src="images/travellerPic3.jpg" alt="supportPic1" style="width:350px;">
+              </div>
+              <div class="traveller1">
+                <img src="images/traveller3.jpg" alt="traveller" class="traveller" style="width:75px;">
+              </div>
+              <div class="content" style="font-weight:600;">
+                By Meagan
+              </div>
+              <div class="Title">
+                <a href="#">America's Most Beautiful National Parks</a>
+              </div>
+              <div class="content">
+                Some of the most beautiful places in the world are right here in America. So, whe...
+              </div>
+              <div class="rating">
+                <i class="fa fa-heart" aria-hidden="true" style="font-size:16px;color:#ff5d5d;margin-left:170px;margin-top:10px;"></i>
+              </div>
+              <div class="rating" style="font-family:Arial;margin-left:148px;margin-top:-5px;">
+                22 items
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="DreamTrips">
+      <h2 class="DreamTripsHeaderDiv">
+        <div class="row">
+          <div class="col-3">
+            <hr>
+          </div>
+          <div class="col-6">
+            <span class="supportHeader">Dream your next trip</span>
+          </div>
+          <div class="col-3">
+            <hr>
+          </div>
+        </div>
+      </h2>
+      <div class="subHeader">
+        Destination travellers alone
+      </div>
+      <div class="dreamDestinationsList">
+        <ul class="dreamDestinations">
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/newYork.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">New York City, NY</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/singapore.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">Singapore, Singapore</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/rome.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">Rome, Italy</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/paris.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">Paris, France</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/barcelona.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">Barcelona, Spain</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/tokyo.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">Tokyo, Japan</a>
+            </div>
+          </li>
+          <li class="dreamDestination">
+            <div class="card2">
+              <div class="image">
+                <img src="images/london.jpg" alt="supportPic1" style="width:350px;height:233.33px;">
+              </div>
+              <a href="#" class="destinationlink">London, UK</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="awards">
+      <img src="images/awardlogo.svg" alt="awardlogo" style="width:200px;margin-top:50px;margin-bottom:20px;">
+      <div class="awardHeader" style="width:200px;text-align:center;">
+        <h1 style="font-family:MyWebFont1;font-size:36px;color:#FFFFFF;padding-bottom:30px;">2020 Travellers' Choice Awards</h1>
+      </div>
+      <button class="winnersbtn" style="border-radius:12px;background-color:#000;color:#FFF;padding:10px 14px;border-style:none;margin-left:25px;">See the winners</button>
+      <img src="images/awards.png" alt="" style="margin-top:-33.9%;margin-left:20%;width:65%;">
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-first">
+      <ul style="display:flex;">
+        <li class="about">
+          <ul>
+            <li>
+              <h6>About Tripadvisor</h6>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Press</a>
+            </li>
+            <li>
+              <a href="#">Resources and Policies</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Content Integrity</a>
+            </li>
+          </ul>
+        </li>
+        <li class="explore">
+          <ul>
+            <li>
+              <h6>Explore</h6>
+            </li>
+            <li>
+              <a href="#">Write a review</a>
+            </li>
+            <li>
+              <a href="#">Join</a>
+            </li>
+            <li>
+              <a href="#">Traveller's Choice</a>
+            </li>
+            <li>
+              <a href="#">Green Leaders</a>
+            </li>
+            <li>
+              <a href="#">Help Centre</a>
+            </li>
+          </ul>
+        </li>
+        <li class="business">
+          <ul>
+            <li>
+              <h6>Do Business With Us</h6>
+            </li>
+            <li>
+              <a href="#">Owners & DMO/CVB</a>
+            </li>
+            <li>
+              <a href="#">Business Advantage</a>
+            </li>
+            <li>
+              <a href="#">Sponsored Placements</a>
+            </li>
+          </ul>
+          <ul style="margin-top:10%;">
+            <li>
+              <h6>Get The App</h6>
+            </li>
+            <li>
+              <a href="#">iPhone App</a>
+            </li>
+            <li>
+              <a href="#">Android App</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-second">
+      <ul>
+        <li>
+          <img src="images/icon.svg" alt="icon" style="width:35px;border-radius:50%;margin-left:80px;">
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div class="copyright">
+            © 2020 Tripadvisor LLC All rights reserved.
+          </div>
+        </li>
+        <li>
+          <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy and Cookies Statement</a>
+            <a href="#">Site Map</a>
+            <a href="#">How the site works</a>
+          </div>
+        </li>
+      </ul>
+      <ul style="display:inline-flex;font-family:Arial;">
+        <li style="margin-left:50%;margin-right:10%;">
+          <div class="INRDropDown" style="width:180px;">
+            <span style="margin-right:7px;">₹</span>INR
+            <span class="dropDown">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          </div>
+        </li>
+        <li>
+            <div class="INRDropDown" style="width:180px;">
+            <span style="margin-right:7px;"></span>India
+            <span class="dropDown">
+              <i class="fa fa-caret-down"></i>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-third">
+      <div class="TC">
+        <span id="Terms" style="font-family:Arial;line-height:-10px;">* TripAdvisor LLC is not a booking agent and does not charge any service fees to users of our site...</span>
+        <a id="More" onclick="showTerms()">more</a>
+        <p style="font-family:Arial;line-height:-10px;">TripAdvisor LLC is not responsible for content on external web sites. Taxes, fees not included for deals content.</p>
+      </div>
+    </div>
+    <div class="social-media" style="font-size:14px;">
+      <i class="fa fa-facebook" style="margin-left:79%;margin-right:10px;"></i>
+      <i class="fa fa-twitter" style="margin-right:10px;"></i>
+      <i class="fa fa-instagram" style="margin-right:10px;"></i>
+      <i class="fa fa-pinterest" style="margin-right:10px;"></i>
+    </div>
+  </div>
+  <script src="js/script.js">
+  </script>
+</body>
+
+</html>
